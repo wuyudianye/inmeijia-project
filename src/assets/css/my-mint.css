@@ -1,0 +1,18 @@
+ .mint-header-title {
+      font-family:"PingFang SC Regular";
+    }  
+.mint-field-core {
+  font-family:"PingFang SC Regular";
+  color:#999999;
+  text-align: left ;
+  font-size: 0.28rem ;
+  background-color: white ;
+
+}
+
+input[type="button"]{
+       background-image:url('../../assets/pic/arrowdown.svg'); 
+       background-repeat: no-repeat;
+       background-position: right 0.11rem;
+       background-size: 0.44rem 0.22rem;
+}
