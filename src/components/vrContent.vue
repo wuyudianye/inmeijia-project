@@ -1,6 +1,6 @@
 <template>  
 
-  <div id="vrshow">
+  <div id="vrContent">
     <div class="num">01</div>
     <img width="100%" src="../assets/pic/vr@3.png">
 
@@ -51,7 +51,7 @@
   
 <script>  
 export default ({    
-	name : 'vrShow',
+	name : 'vrContent',
   data () {  
     return {  
        p2a1: false, 
@@ -73,7 +73,7 @@ export default ({
 </script>  
   
 <style scoped> 
-#vrshow {
+#vrContent {
   position: relative;
   background-color: green;
 }
@@ -85,7 +85,7 @@ export default ({
   font-size: 2.4rem;
   font-family: "Helvetica Neue";
 }
-#vrshow>img {
+#vrContent>img {
   display:block;
 }
 .vrword{

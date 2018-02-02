@@ -3,7 +3,7 @@
     <Top></Top>
     <roll-picture></roll-picture>
     <router-view></router-view>
-    <vr-show></vr-show>
+    <vr-content></vr-content>
     <register></register>
     
   </div>
@@ -12,7 +12,7 @@
 <script>
 import Top from './components/top.vue';
 import rollPicture from './components/rollPicture.vue';
-import vrShow from './components/vrShow.vue';
+import vrContent from './components/vrContent.vue';
 import register from './components/register.vue';
 
 export default {
@@ -24,8 +24,8 @@ export default {
   components:{
       Top,
       rollPicture,
-      vrShow,
-      register
+      vrContent,
+      register,
     }
 }
 </script>

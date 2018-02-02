@@ -9,7 +9,7 @@ Vue.prototype.axios = axios;
 
 import 'mint-ui/lib/style.css'
 import { Swipe, SwipeItem } from 'mint-ui';
-import './assets/css/my-mint.css';
+import './assets/css/mint.css';
 import { Picker } from 'mint-ui';
 import { Popup } from 'mint-ui';
 import { Field } from 'mint-ui';
