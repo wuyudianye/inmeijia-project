@@ -15,6 +15,7 @@ import rollPicture from './components/rollPicture.vue';
 import vrContent from './components/vrContent.vue';
 import register from './components/register.vue';
 
+
 export default {
   name: 'app',
   methods: {

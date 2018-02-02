@@ -16,6 +16,7 @@ import { Field } from 'mint-ui';
 import { Button } from 'mint-ui';
 import { Header } from 'mint-ui';
 import { Cell } from 'mint-ui';
+import { Toast } from 'mint-ui';
 
 Vue.component(Cell.name, Cell);
 Vue.component(Header.name, Header);
@@ -41,11 +42,11 @@ Vue.config.productionTip = false
             html.style.fontSize = oWidth/pwidth*prem + "px";
             
         };
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  axios,
   template: '<App/>',
   components: { App }
 })

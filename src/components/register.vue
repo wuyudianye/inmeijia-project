@@ -26,7 +26,7 @@
      <mt-field id="community"label="" placeholder="所在小区" v-model="communityName" ></mt-field >
 
      <mt-button type="default"  size="large"
-     :disabled="commitDisabled" >立即预约</mt-button>
+     :disabled="commitDisabled" @click.native="onDataSubmit">立即预约</mt-button>
 
      <div v-html="communityTip"></div>
 
@@ -39,6 +39,7 @@
 </template>  
   
 <script>  
+import data from '../mock/mock';
 export default ({    
 	name : 'register',
   data () {  
@@ -85,6 +86,38 @@ export default ({
         picker.setSlotValue(1, values[0]);
       }
       this.cityString = values[0];
+    },
+    onDataSubmit(){
+      this.axios.post("http://inmeijia.cn/register",{
+        kind:this.kindString,
+        city:this.cityString,
+        community:this.communityName,
+      })
+      .then((response) =>{
+       console.log(response);
+       if(response.data.isSuccess===true){
+          this.$toast({
+          message: '预约成功！',
+          position: 'middle',
+          duration: 5000
+        });
+       }
+       else{
+        this.$toast({
+              message: '预约失败，请稍后再试！',
+              position: 'middle',
+              duration: 5000
+            });
+       }
+      })
+      .catch(function (error) {
+        this.$toast({
+              message: '预约失败，请稍后再试！',
+              position: 'middle',
+              duration: 5000
+            });
+        });
+      this.communityName="";
     }
   },
   computed: {
@@ -117,7 +150,7 @@ export default ({
 #register {
   position: relative;
   background-color: #F5F5F5;
-  height: 1000px;
+  height: 15rem;
 }
 .inlogo{
   position: absolute;

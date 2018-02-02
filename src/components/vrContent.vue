@@ -29,14 +29,14 @@
         </div>
     </transition>
     
-    <transition name="fade">
-      <ul v-show="p2a1">
+  
+      <ul >
         <li></li>
         <li></li>
         <li></li>
         <li></li>
       </ul>
-     </transition>
+
 
     <transition name="fade"> 
       <article  v-show="p2a1" class="recommend">
@@ -60,6 +60,7 @@ export default ({
   },
    mounted () {     
     window.addEventListener('scroll', this.ani);
+
     },
     methods: {
       ani () {       
@@ -168,6 +169,7 @@ ul{
   width:2.65rem;
   height:2.65rem;
  
+ 
 }
 ul li:nth-child(1){
   position: absolute;
@@ -177,9 +179,9 @@ ul li:nth-child(1){
   border:1px solid #D1EDEA;
   width: 2.65rem;
   height:2.65rem;
-  /*border-left: none;*/
-  /*border-bottom: none;*/
-  
+
+  animation: sonic 1s infinite linear;
+
 }
 ul li:nth-child(2){
   position: absolute;
@@ -189,7 +191,8 @@ ul li:nth-child(2){
   border:1px solid #E3F0EE;
   width: 1.90rem;
   height: 1.90rem;
-
+ animation: sonic 1s infinite linear;
+  animation-delay: 0.3s;
 }
 ul li:nth-child(3){
   position: absolute;
@@ -199,6 +202,8 @@ ul li:nth-child(3){
   border:1px solid #D3ECE9;
    width: 1.2rem;
   height:1.2rem;
+   animation: sonic 1s infinite linear ;
+   animation-delay: -0.3s;
 }
 ul li:nth-child(4){
   position: absolute;
@@ -250,6 +255,22 @@ ul li:nth-child(4){
     }
     100% {   
     transform:scale(1);  
+        }
+  } 
+   
+  @keyframes sonic {
+    0% {    
+      top: 1.08rem;
+  left: 1.08rem;
+    width: 0.5rem;
+    height:0.5rem; 
+        }
+  
+    100% {   
+    width: 2.65rem;
+    height:2.65rem; 
+    top: 0;
+  left: 0; 
         }
   } 
 
