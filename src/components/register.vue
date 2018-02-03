@@ -10,21 +10,23 @@
     
     <form class="registerdetail">
 
-
+<!-- 表单：类型选择 -->
      <mt-field id="type" label="" type="button" disableClear placeholder="请输入类型"  @click.native="handlerKind" :value="kindString" ></mt-field>
       <mt-popup style="width:100%;" v-model="kindVisible" position="bottom">
              <mt-picker :slots="kindSlots" @change="onKindChange">
              </mt-picker>
      </mt-popup>
 
+
+<!-- 表单：城市选择 -->
      <mt-field id="city" label="" type="button" disableClear placeholder="请输入城市" @click.native="handlercity" v-model="cityString"></mt-field>
      <mt-popup style="width:100%;" v-model="cityVisible" position="bottom">
              <mt-picker :slots="citySlots" @change="oncityChange" @login>
              </mt-picker>
      </mt-popup>
-
+<!-- 表单：所在小区输入 -->
      <mt-field id="community"label="" placeholder="所在小区" v-model="communityName" ></mt-field >
-
+<!-- 表单：提交按钮 -->
      <mt-button type="default"  size="large"
      :disabled="commitDisabled" @click.native="onDataSubmit">立即预约</mt-button>
 

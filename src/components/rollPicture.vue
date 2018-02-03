@@ -1,4 +1,5 @@
 <template>  
+  <!-- 用swipe制作轮播 -->
   <mt-swipe :auto="4000" style="height:4.18rem;">
      <mt-swipe-item><img width=100% src="../assets/pic/banner1.png"></mt-swipe-item>
      <mt-swipe-item><img width=100% src="../assets/pic/banner2.png"></mt-swipe-item>

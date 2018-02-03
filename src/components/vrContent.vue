@@ -1,9 +1,9 @@
 <template>  
-
+<!-- 主体内容部分 -->
   <div id="vrContent">
     <div class="num">01</div>
     <img width="100%" src="../assets/pic/vr@3.png">
-
+ 
     <transition name="bounce">
       <header v-show="p2a1" class="title">
         <p>VR全屋装</p>
@@ -17,7 +17,7 @@
         <p>VR全景方案100%还原未来新家</p>
       </article>
     </transition>
-
+  <!-- 装饰 -->
     <div class="vrword">VR</div>
     <div class="leftline" ></div>
     <div class="bottomline" ></div>
@@ -29,7 +29,7 @@
         </div>
     </transition>
     
-  
+  <!-- 电波 -->
       <ul >
         <li></li>
         <li></li>
@@ -58,7 +58,8 @@ export default ({
        
     }  
   },
-   mounted () {     
+   mounted () {  
+      // 滚动触发动画   
     window.addEventListener('scroll', this.ani);
 
     },
@@ -127,7 +128,7 @@ export default ({
   position: absolute;
   top: 1.15rem;
   left: 1.10rem;
-  width: 1px;
+  width: 0.01rem;
   height:0.3rem;
   background-color: #e0e2eb;
 }
@@ -136,7 +137,7 @@ export default ({
   top: 3.12rem;
   left: 1.06rem;
   width: 0.3rem;
-  height:1px;
+  height:0.01rem;
   background-color: #149A91;
 
 }

@@ -2,11 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+//导入了router,但是没有真正进行使用
 import router from './router'
 import MintUI from 'mint-ui'
 import axios from 'axios'
 Vue.prototype.axios = axios;
 
+//导入mint-ui各个模块
 import 'mint-ui/lib/style.css'
 import { Swipe, SwipeItem } from 'mint-ui';
 import './assets/css/mint.css';
@@ -29,7 +31,7 @@ Vue.component(SwipeItem.name, SwipeItem);
 
 Vue.use(MintUI);
 Vue.config.productionTip = false
-
+      //移动端进行rem适配，设计稿750px，每100px为1rem。
         window.onload = function(){
             getRem(750,100)
         };

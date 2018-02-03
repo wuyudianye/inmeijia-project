@@ -1,4 +1,5 @@
 <template>  
+<!-- 利用mint-ui的header做顶栏 -->
         <mt-header fixed title="in美家">  
           <router-link to="/" slot="left">  
             <mt-button icon="back" @click="handleClose"></mt-button>  

@@ -1,9 +1,14 @@
 <template>
   <div id="app">
+    <!-- 顶栏组件 -->
     <Top></Top>
+    <!-- 轮播图组件 -->
     <roll-picture></roll-picture>
+    <!-- 路由组件，并未真正使用 -->
     <router-view></router-view>
+    <!-- 内容组件 -->
     <vr-content></vr-content>
+    <!-- 表单组件 -->
     <register></register>
     
   </div>
@@ -32,6 +37,7 @@ export default {
 </script>
 
 <style>
+  /*进行重置*/
   html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
