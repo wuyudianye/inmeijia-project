@@ -23,6 +23,7 @@
 3. top组件（顶部）的icon更改。
 4. 轮播图组件可以改为用axios从后台得到图片地址。
 5. 制作表单组件时，首先是试图重写select,但是在chrome浏览器中，select 的option宽度无法做到与select相同，以失败告终；随后用mint-ui的field和pupup和picker组件制作。
+6. 增加缓存sessionstorage。
 
 ### GIF演示
 ![演示](./src/assets/pic/show.gif)
